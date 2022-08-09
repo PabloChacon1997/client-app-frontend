@@ -1,0 +1,11 @@
+<button type="button" (click)="setHabilitar()" class="btn btn-primary my-3">
+  {{habilitar==true? 'Hidden': 'Show'}}
+</button>
+<div class="card">
+  <div class="card-header bg-primary text-white">
+    Languages
+  </div>
+  <ul class="list-group" *ngIf="habilitar == true">
+    <li class="list-group-item" *ngFor="let curso of listaCurso">{{curso}}</li>
+  </ul>
+</div>
